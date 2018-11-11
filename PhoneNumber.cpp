@@ -21,13 +21,13 @@ PhoneNumber::~PhoneNumber()
 void PhoneNumber::add_phone_number(string mobileNumber, string numberOperator)
 {
 	NumberInfo  number(mobileNumber, numberOperator);
-	if (numberList.LengthIs() == 15)
+	if (UnsortList.LengthIs() == 15)
 	{
 		cout << "Already have 15 numbers!" << endl;
 	}
 	else
 	{
-		numberList.InsertItem(number);
+		UnsortList.InsertItem(number);
 	}
 
 
@@ -40,10 +40,21 @@ void PhoneNumber::remove_phone_number(string mobileNumber, string numberOperator
 	NumberInfo  number(mobileNumber, numberOperator);
 	if (numberList.LengthIs() == 1)
 	{
-		numberList.MakeEmpty();
+		UnsortList.MakeEmpty();
 	}
 	else
 	{
-		numberList.DeleteItem(number);
+		UnsortList.DeleteItem(number);
 	}
 }
+
+bool PhoneNumber::search_phone_number(string mobileNumber, string numberOperator)
+{
+	NumberInfo  number(mobileNumber, numberOperator);
+	
+	bool found = false;
+	UnsortList.RetrieveItem(number, found);
+	return found;
+}
+
+

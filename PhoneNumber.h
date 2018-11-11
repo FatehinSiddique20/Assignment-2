@@ -18,7 +18,7 @@ public:
 	bool search_phone_number(string, string);
 
 private:
-	UnsortedType<NumberInfo> numberList;
+	UnsortedType<NumberInfo> UnsortList;
 
 
 };
