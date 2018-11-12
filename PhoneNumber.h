@@ -2,7 +2,7 @@
 #define PHONENUMBER_H_INCLUDED
 #include<string>
 #include<iostream>
-#include"UnsortedType.h"
+#include"UnsortedTypeLL.h"
 #include "NumberInfo.h"
 
 using namespace std;
@@ -18,7 +18,7 @@ public:
 	bool search_phone_number(string, string);
 
 private:
-	UnsortedType<NumberInfo> UnsortList;
+	UnsortedTypeLL<NumberInfo> UnsortList;
 
 
 };

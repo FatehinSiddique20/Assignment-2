@@ -1,24 +1,25 @@
-#include"UnsortedType.h"
+#include"UnsortedTypeLL.h"
 #include<iostream>
 #include <exception>
 using namespace std;
+template class UnsortedTypeLL<NumberInfo>;
 
 
 template<class ItemType>
-UnsortedType<ItemType>::UnsortedType()
+UnsortedTypeLL<ItemType>::UnsortedTypeLL()
 {
     length=0;
     listData=NULL;
-    
+
 
 }
 template<class ItemType>
-int UnsortedType<ItemType>::LengthIs()
+int UnsortedTypeLL<ItemType>::LengthIs()
 {
     return length;
 }
 template<class ItemType>
-bool UnsortedType<ItemType>::IsFull()
+bool UnsortedTypeLL<ItemType>::IsFull()
 {
   NodeType* location;
   try
@@ -33,7 +34,7 @@ bool UnsortedType<ItemType>::IsFull()
   }
 }
 template<class ItemType>
-void UnsortedType<ItemType>::InsertItem(ItemType item)
+void UnsortedTypeLL<ItemType>::InsertItem(ItemType item)
 {
  NodeType* location;
  location = new NodeType;
@@ -44,7 +45,7 @@ listData = location;
 
 }
 template<class ItemType>
-void UnsortedType<ItemType>::DeleteItem(ItemType item)
+void UnsortedTypeLL<ItemType>::DeleteItem(ItemType item)
 {
     NodeType* location = listData;
     NodeType* tempLocation = NULL;
@@ -71,7 +72,7 @@ void UnsortedType<ItemType>::DeleteItem(ItemType item)
 
 
 template<class ItemType>
-void UnsortedType<ItemType>::RetrieveItem(ItemType&item,bool&found)
+void UnsortedTypeLL<ItemType>::RetrieveItem(ItemType&item,bool&found)
 {
     NodeType* location = listData;
     bool moreToSearch = (location !=NULL);
@@ -90,7 +91,7 @@ void UnsortedType<ItemType>::RetrieveItem(ItemType&item,bool&found)
     }
 }
 template<class ItemType>
-void UnsortedType<ItemType>::MakeEmpty()
+void UnsortedTypeLL<ItemType>::MakeEmpty()
 {
     NodeType* tempPtr;
     while(listData!=NULL)
@@ -102,13 +103,13 @@ void UnsortedType<ItemType>::MakeEmpty()
     }
 }
 template<class ItemType>
-UnsortedType<ItemType>::~UnsortedType()
+UnsortedTypeLL<ItemType>::~UnsortedTypeLL()
 {
     MakeEmpty();
 }
 
 template<class ItemType>
-void UnsortedType<ItemType>::print()
+void UnsortedTypeLL<ItemType>::print()
 {
     NodeType *temp =listData;
    while(temp!=NULL)
