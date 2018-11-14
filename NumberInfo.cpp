@@ -1,4 +1,5 @@
 #include "NumberInfo.h"
+#include <string>
 
 NumberInfo::NumberInfo()
 {
@@ -31,4 +32,15 @@ string NumberInfo::get_number_operator()
 void NumberInfo::set_mobile_number(string mobileNumber)
 {
 	this->mobileNumber = mobileNumber;
+}
+bool NumberInfo::same_number(string mobileNumber)
+{
+if (this->mobileNumber.compare(mobileNumber) == 0)
+		return true;
+	else
+		return false;
+}
+void NumberInfo:: print()
+{
+cout<< "Mobile Number: "<<mobileNumber<<" " << "Operator: "<<numberOperator<< endl;
 }
