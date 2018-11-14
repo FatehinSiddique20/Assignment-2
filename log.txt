@@ -1,8 +1,16 @@
+commit 26bca83c3dadc140c8d1d4bec6e15198eb54c845
+Author: FatehinSiddique20 <fatehin20@gmail.com>
+Date:   Mon Nov 12 20:14:59 2018 +0600
+
+    Added template to unsortedTypeLL.cpp
+
+
 commit 620d0e9d9a35b386487dadb8f55fa3016bf81645
 Author: FatehinSiddique20 <fatehin20@gmail.com>
 Date:   Mon Nov 12 17:51:43 2018 +0600
 
     Person class cpp is created, it has the constructor to take in all the relavant info of a customer, and also the print function.
+
 
 commit 47b2bbe650fdb7bc6ff9ab8f9725bdb5199db0fa
 Author: FatehinSiddique20 <fatehin20@gmail.com>
@@ -10,11 +18,13 @@ Date:   Mon Nov 12 01:14:37 2018 +0600
 
     Created Header file for person class, with all the necessary data mentioned.
 
+
 commit 1061adc663310fec7c3da6ba8bb729af0154c73b
 Author: FatehinSiddique20 <fatehin20@gmail.com>
 Date:   Mon Nov 12 00:29:09 2018 +0600
 
     Created search phone number function to retrieve customer info
+
 
 commit c8f955cfc8d3df45172d140a49e24d1a328ae639
 Author: FatehinSiddique20 <fatehin20@gmail.com>
@@ -22,17 +32,20 @@ Date:   Mon Nov 12 00:15:07 2018 +0600
 
     Add phone number and Parmatrised constructor had the block code, hence have called the add_phone_number to the par constructor, used the object created for unsorted type linked list to check the length of the numbers inputed, in the remove phone number function, I have called the object for unsorted type class to see if the phone number I'm removing is the last number of the customer if yes, then I've called the make empty function to delete all the dat of the customer.
 
+
 commit 405d9750d0d6b572595a7ec63f2873814ce0aab5
 Author: FatehinSiddique20 <fatehin20@gmail.com>
 Date:   Sun Nov 11 23:56:54 2018 +0600
 
     Created UnsortedType Linked List class for the necessary operations like make empty, getting length, retrieving item etc.
 
+
 commit 470e2fa1372d584f23b6746aa883a950d8a2d638
 Author: FatehinSiddique20 <fatehin20@gmail.com>
 Date:   Sun Nov 11 23:35:44 2018 +0600
 
     Added constructor, destructor and parametrized constructor, inside the par. consuctor it checks if the number count has exceeded 15 numbers
+
 
 commit 5125d538d984280b778f6b6063ae61e78fe40fe6
 Author: FatehinSiddique20 <fatehin20@gmail.com>
@@ -46,11 +59,13 @@ Date:   Sun Nov 11 22:25:07 2018 +0600
 
     Setter getter for mobile number and getter for mobile operator is added
 
+
 commit 2d94355b8382584a75f0a0f3895cbaa658f1ff28
 Author: FatehinSiddique20 <fatehin20@gmail.com>
 Date:   Sun Nov 11 22:15:26 2018 +0600
 
     Paremetrisied constructor, destructor and number operator is set
+
 
 commit 4de9f4f0374889b08ec5def409491a6a8b6526af
 Author: FatehinSiddique20 <fatehin20@gmail.com>

@@ -9,18 +9,8 @@ PhoneNumber::PhoneNumber()
 
 PhoneNumber::PhoneNumber(string mobileNumber, string numberOperator)
 {
-   	NumberInfo  number(mobileNumber, numberOperator);
-	if (UnsortList.LengthIs() == 15)
-	{
-		cout << "Already have 15 numbers!" << endl;
-	}
-	else
-	{
-		UnsortList.InsertItem(number);
-	}
-
-
-
+   
+add_phone_number(mobileNumber, numberOperator);
 
 }
 
@@ -62,11 +52,10 @@ void PhoneNumber::remove_phone_number(string mobileNumber, string numberOperator
 
 bool PhoneNumber::search_phone_number(string mobileNumber, string numberOperator)
 {
-	NumberInfo  number(mobileNumber, numberOperator);
-
-	bool found = false;
-	UnsortList.RetrieveItem(number, found);
-	return found;
+	return UnsortList.search(mobileNumber);
 }
-
+void PhoneNumber::print_phone_number()
+{
+UnsortList.print();
+}
 

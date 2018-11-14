@@ -16,7 +16,7 @@ public:
 	void add_phone_number(string, string);
 	void remove_phone_number(string, string);
 	bool search_phone_number(string, string);
-
+        void print_phone_number();
 private:
 	UnsortedTypeLL<NumberInfo> UnsortList;
 

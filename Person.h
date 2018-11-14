@@ -34,10 +34,10 @@ public:
 	string get_eye_color();
 	string get_hair_color();
 
-	void print();
+	void print_person();
 
 
-private:
+protected:
 	string name;
 	string fatherName;
 	string motherName;

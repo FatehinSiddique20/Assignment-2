@@ -13,10 +13,11 @@ public:
 	~NumberInfo();
 	void set_mobile_number(string);
 	void set_number_operator(string);
-	bool is_equal(NumberInfo);
+	bool same_number(NumberInfo);
 
 	string get_mobile_number();
 	string get_number_operator();
+        void print();
 
 private:
 	string mobileNumber;
