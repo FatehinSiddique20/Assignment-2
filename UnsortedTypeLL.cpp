@@ -1,8 +1,12 @@
 #include"UnsortedTypeLL.h"
 #include<iostream>
 #include <exception>
+#include <string>
+#include "CustomerData.h"
+#include "NumberInfo.h"
 using namespace std;
 template class UnsortedTypeLL<NumberInfo>;
+template class UnsortedTypeLL<CustomerData>;
 
 
 template<class ItemType>
@@ -10,6 +14,7 @@ UnsortedTypeLL<ItemType>::UnsortedTypeLL()
 {
     length=0;
     listData=NULL;
+    currentPos = NULL;
 
 
 }
@@ -44,8 +49,26 @@ listData = location;
  length++;
 
 }
+
 template<class ItemType>
-void UnsortedTypeLL<ItemType>::DeleteItem(ItemType item)
+void UnsortedTypeLL<ItemType>::ResetList()
+{
+	currentPos = NULL;
+}
+template<class ItemType>
+
+ItemType* UnsortedTypeLL<ItemType>::GetNextItem()
+{
+	if (currentPos == NULL)
+	{
+		currentPos = listData;
+	}
+	else
+		currentPos = currentPos->next;
+	return &(currentPos->info);
+}
+template<class ItemType>
+void UnsortedTypeLL<ItemType>::DeleteItem(string item)
 {
     NodeType* location = listData;
     NodeType* tempLocation = NULL;
@@ -96,6 +119,7 @@ void UnsortedTypeLL<ItemType>::MakeEmpty()
     NodeType* tempPtr;
     while(listData!=NULL)
     {
+        currentPos = NULL;
         tempPtr = listData;
         listData= listData->next;
         delete tempPtr;

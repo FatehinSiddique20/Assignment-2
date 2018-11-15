@@ -1,9 +1,9 @@
 
 #include "NumberInfo.h"
-#ifndef UNSORTEDTYPE_H_INCLUDED
-#define UNSORTEDTYPE_H_INCLUDED
+#ifndef UNSORTEDTYPELL_H_INCLUDED
+#define UNSORTEDTYPELL_H_INCLUDED
 template<class ItemType>
-class UnsortedType
+class UnsortedTypeLL
 {
 struct NodeType
 {
@@ -12,8 +12,8 @@ ItemType info;
 NodeType*next;
 };
 public:
-    UnsortedType();
-    ~UnsortedType();
+    UnsortedTypeLL();
+    ~UnsortedTypeLL();
     bool IsFull();
     int LengthIs();
     void MakeEmpty();
@@ -30,4 +30,4 @@ private:
 };
 
 
-#endif // UNSORTEDTYPE_H_INCLUDED
+#endif // UNSORTEDTYPELL_H_INCLUDED
