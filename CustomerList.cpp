@@ -31,3 +31,18 @@ bool CustomerList::search_mobile(string mobileNumber)
 	}
 	return found;
 }
+
+bool check_nid(string nationalId)
+{
+	return nationalId.length() == 11;
+}
+void CustomerList::delete_customer(string nId)
+{
+
+	customerList.DeleteItem(nId);
+}
+
+void CustomerList::print()
+{
+	customerList.print();
+}
