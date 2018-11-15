@@ -17,3 +17,17 @@ CustomerList::CustomerList(string name, string fatherName, string motherName, st
 CustomerList::~CustomerList()
 {
 }
+
+bool CustomerList::search_mobile(string mobileNumber)
+{
+	CustomerData *temp;
+	bool found = false;
+	int length = customerList.LengthIs();
+	customerList.ResetList();
+	while (length--)
+	{
+		temp = customerList.GetNextItem();
+		found = temp->check_mobile(mobileNumber);
+	}
+	return found;
+}
