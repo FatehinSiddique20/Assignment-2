@@ -41,6 +41,35 @@ void CustomerList::delete_customer(string nId)
 
 	customerList.DeleteItem(nId);
 }
+void CustomerList::insert_customer(string name, string fatherName, string motherName, string maritalStatus,
+	string nationalId, string spouseName, string presentAddress, string permanentAddress, string eyeColor, string hairColor, string mobileNumber, string numberOperator, float height,
+	float weight)
+{
+
+	CustomerData customer(name, fatherName, motherName, maritalStatus,
+		nationalId, spouseName, presentAddress, permanentAddress, eyeColor, hairColor, mobileNumber, numberOperator, height,
+		weight);
+	if (check_nid(nationalId))
+	{
+		if (customerList.search(nationalId))
+		{
+			cout << "This NID already exists." << endl;
+		}
+		else
+		{
+			if (!search_mobile(mobileNumber))
+			{
+				customerList.InsertItem(customer);
+			}
+			else
+				cout << "This Mobile Number already exists." << endl;
+		}
+	}
+	else
+	{
+		cout << "This National Id is Not Correct." << endl;
+	}
+}
 
 void CustomerList::print()
 {
