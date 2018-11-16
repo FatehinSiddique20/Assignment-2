@@ -37,7 +37,7 @@ bool CustomerData::check_nid(string nId)
 void CustomerData::print()
 {
 	this->print_person();
-	phoneList.print_phone_number();
+	phoneList.print();
 }
 
 bool CustomerData::insert_phone(string nId,string mobileNumber, string numberOperator)
@@ -54,12 +54,21 @@ bool CustomerData::insert_phone(string nId,string mobileNumber, string numberOpe
 	}
 }
 
-void CustomerData::delete_phone(string mobileNumber, string numberOperator)
+void CustomerData::delete_phone(string mobileNumber)
 {
-	phoneList.remove_phone_number(mobileNumber, numberOperator);
+	phoneList.remove_phone_number(mobileNumber);
 }
 
 bool CustomerData::is_equal(string nId)
 {
 	return (nId.compare(nationalId) == 0);
+}
+bool CustomerData::change_operator(string mobileNumber, string numberOperator)
+{
+	return phoneList.change_operator(mobileNumber, numberOperator);
+}
+
+int CustomerData::count_number()
+{
+	return phoneList.get_length();
 }

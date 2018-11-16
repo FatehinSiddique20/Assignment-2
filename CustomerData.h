@@ -12,7 +12,7 @@ public:
 	bool check_nid(string);
 	bool check_mobile(string);
 	bool insert_phone(string,string, string);
-	void delete_phone(string, string);
+	void delete_phone(string);
 	bool is_equal(string);
 	bool change_operator(string,string);
 	int count_number();
