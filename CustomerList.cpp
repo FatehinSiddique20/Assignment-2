@@ -71,6 +71,37 @@ void CustomerList::insert_customer(string name, string fatherName, string mother
 	}
 }
 
+void CustomerList::insert_mobile_number(string nationalId, string mobileNumber,string numberOperator)
+{
+	CustomerData *temp;
+	bool found = false;
+	int length = customerList.LengthIs();
+	customerList.ResetList();
+	if (check_nid(nationalId))
+	{
+		if (!(search_mobile(mobileNumber)))
+		{
+			customerList.ResetList();
+			while (length--)
+			{
+				temp = customerList.GetNextItem();
+				found = temp->insert_phone(nationalId, mobileNumber, numberOperator);
+			}
+			if (!found)
+			{
+				cout << "This National Id is not found." << endl;
+			}
+		}
+		else
+			cout << "This Number already exists" << endl;
+
+	}
+	else
+	{
+		cout << "National Id is incorrect." << endl;
+	}
+}
+
 void CustomerList::print()
 {
 	customerList.print();

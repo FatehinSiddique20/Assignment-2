@@ -1,3 +1,73 @@
+commit fd72e84d87a8125a5641e687170125e93896b69e
+Author: FatehinSiddique20 <fatehin20@gmail.com>
+Date:   Fri Nov 16 03:33:09 2018 +0600
+
+    Implemented the insert customer function and using the search function made sure that the same NID or Mobile number is not inserted.
+
+
+commit 5951d2be24feba808c94c5260e0fb95b44ea7bc2
+Author: FatehinSiddique20 <fatehin20@gmail.com>
+Date:   Fri Nov 16 03:22:43 2018 +0600
+
+    Created a function to delete the customer info using its NID and also the print function
+
+
+commit 2edaba51ffaf936db2be7ad2d570a2cddb38784a
+Author: FatehinSiddique20 <fatehin20@gmail.com>
+Date:   Fri Nov 16 03:11:43 2018 +0600
+
+    Created search mobile function for customer list class, in order to search any mobile number.
+
+
+commit 9384c2d1fc456944d208c521ad235d014898f2fb
+Author: FatehinSiddique20 <fatehin20@gmail.com>
+Date:   Fri Nov 16 03:07:16 2018 +0600
+
+    Created constructor, destructor and parametrised constructor for customer list class
+
+
+commit e61568fafe88ea96e9d0f15172ec1a2aa0688a0b
+Author: FatehinSiddique20 <fatehin20@gmail.com>
+Date:   Fri Nov 16 02:54:05 2018 +0600
+
+    Created Customer List header file and included funtions to search mobile number, deleting customer, storing customer related data.
+
+
+commit 49da6fa181010eca7f6aec4fa4b2c89683b811bc
+Author: FatehinSiddique20 <fatehin20@gmail.com>
+Date:   Thu Nov 15 01:24:41 2018 +0600
+
+    Added Print function and did some edit in the Phone number cpp
+
+
+commit d7328cdc2f1b2adc60dbd03af8be977670608969
+Author: FatehinSiddique20 <fatehin20@gmail.com>
+Date:   Thu Nov 15 01:07:53 2018 +0600
+
+    Added the print function along with the necessary setter and getters
+
+
+commit e4d4aafbf92111f309d2df9a960670e8ca838b89
+Author: FatehinSiddique20 <fatehin20@gmail.com>
+Date:   Wed Nov 14 18:24:31 2018 +0600
+
+    Added parametrised constructor and destructor to person class
+
+
+commit ce64d996140e8f14ad11d88f674f8ba8ae1e3aa7
+Author: FatehinSiddique20 <fatehin20@gmail.com>
+Date:   Wed Nov 14 09:37:48 2018 +0600
+
+    Added constructor to person class
+
+
+commit 7ae03f0c589339d313efe07f4a846e3293dca313
+Author: FatehinSiddique20 <fatehin20@gmail.com>
+Date:   Wed Nov 14 09:29:03 2018 +0600
+
+    Added print function to Number info
+
+
 commit 26bca83c3dadc140c8d1d4bec6e15198eb54c845
 Author: FatehinSiddique20 <fatehin20@gmail.com>
 Date:   Mon Nov 12 20:14:59 2018 +0600
@@ -30,7 +100,7 @@ commit c8f955cfc8d3df45172d140a49e24d1a328ae639
 Author: FatehinSiddique20 <fatehin20@gmail.com>
 Date:   Mon Nov 12 00:15:07 2018 +0600
 
-    Add phone number and Parmatrised constructor had the block code, hence have called the add_phone_number to the par constructor, used the object created for unsorted type linked list to check the length of the numbers inputed, in the remove phone number function, I have called the object for unsorted type class to see if the phone number I'm removing is the last number of the customer if yes, then I've called the make empty function to delete all the dat of the customer.
+    Add phone number and Parmatrised constructor had the block code, hence have called the add_phone_number to the par constructor, used the object created for unsorted type linked list to check the length of the numbers inputed, in the remove phone number function, I have called the object for unsorted type class to see if the phone number I'm removing is the last number of the customer if yes, then I've called the make empty function to delete all the data of the customer.
 
 
 commit 405d9750d0d6b572595a7ec63f2873814ce0aab5
@@ -52,6 +122,7 @@ Author: FatehinSiddique20 <fatehin20@gmail.com>
 Date:   Sun Nov 11 23:21:09 2018 +0600
 
     Created a phone class for adding removing and searching phonenumber
+
 
 commit 5a4aa47b91586412b2a96883b65e84f617547481
 Author: FatehinSiddique20 <fatehin20@gmail.com>
