@@ -1,7 +1,8 @@
 
-#include "NumberInfo.h"
+#include <sring>
 #ifndef UNSORTEDTYPELL_H_INCLUDED
 #define UNSORTEDTYPELL_H_INCLUDED
+using namespace std;
 template<class ItemType>
 class UnsortedTypeLL
 {
@@ -17,15 +18,17 @@ public:
     bool IsFull();
     int LengthIs();
     void MakeEmpty();
-    void RetrieveItem(ItemType&,bool&);
     void InsertItem(ItemType);
-    void DeleteItem(ItemType);
-    
+    void DeleteItem(string);
+    bool search (string);
+    ItemType* GetNextItem();
+    void ResetList();
+
     void print();
 private:
     NodeType * listData;
     int length;
-    
+    NodeType *currentPos;
 
 };
 

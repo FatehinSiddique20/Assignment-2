@@ -1,5 +1,6 @@
 #include "Person.h"
 #include "PhoneNumber.h"
+#include<string>
 using namespace std;
 
 class CustomerData: public Person
@@ -13,6 +14,9 @@ public:
 	bool insert_phone(string,string, string);
 	void delete_phone(string, string);
 	bool is_equal(string);
+	bool change_operator(string,string);
+	int count_number();
+
         void print();
 private:
 	PhoneNumber phoneList;

@@ -19,6 +19,15 @@ void NumberInfo::set_number_operator(string numberOperator)
 {
 	this->numberOperator = numberOperator;
 }
+void NumberInfo::is_equal(string mobileNumber)
+{
+ if (this->mobileNumber.compare(mobileNumber)==0)
+{
+return true;
+}
+else 
+return false;
+}
 string NumberInfo::get_mobile_number()
 {
 	return mobileNumber;

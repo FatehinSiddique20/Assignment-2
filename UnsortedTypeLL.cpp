@@ -68,50 +68,45 @@ ItemType* UnsortedTypeLL<ItemType>::GetNextItem()
 	return &(currentPos->info);
 }
 template<class ItemType>
-void UnsortedTypeLL<ItemType>::DeleteItem(string item)
+void UnsortedType<ItemType>::DeleteItem(string item)
 {
     NodeType* location = listData;
     NodeType* tempLocation = NULL;
-    if(item == listData->info)
+    if((listData->info.is_equal(item)))
     {
         tempLocation = location;
         listData = listData->next;
-
+		delete tempLocation;
     }
     else
     {
-        while(!(item == (location->next)->info))
+        while(!(location->next->info.is_equal(item)))
         {
+			tempLocation = location;
             location = location->next;
-            tempLocation = location->next;
-            location->next = (location->next)->next;
-
         }
+		if (location->next != NULL)
+			location->next = location->next->next;
+		else
+			location->next = NULL;
         delete tempLocation;
         length--;
-
     }
 }
 
 
 template<class ItemType>
-void UnsortedTypeLL<ItemType>::RetrieveItem(ItemType&item,bool&found)
+void UnsortedTypeLL<ItemType>::search(string item)
 {
-    NodeType* location = listData;
-    bool moreToSearch = (location !=NULL);
-    found = false;
-    while(moreToSearch && !found)
-    {
-        if(item == location->info)
-            found = true;
-        else
-        {
-
-
-            location = location->next;
-            moreToSearch = (location!=NULL);
-        }
-    }
+    NodeType* temp;
+	temp = listData;
+	while (temp != NULL)
+	{
+		if (temp->info.is_equal(item))
+			return true;
+		temp = temp->next;
+	}
+	return false;
 }
 template<class ItemType>
 void UnsortedTypeLL<ItemType>::MakeEmpty()
@@ -131,16 +126,30 @@ UnsortedTypeLL<ItemType>::~UnsortedTypeLL()
 {
     MakeEmpty();
 }
-
+template<class ItemType>
+void UnsortedTypeLL<ItemType>::ResetList()
+{
+    currentPos=NULL;
+}
+template<class ItemType>
+void UnsortedTypeLL<ItemType>::InsertItem(ItemType item)
+{
+   NodeType* location;
+   location = new NodeType;
+   location->info=item;
+   location->next=listData;
+   listData = location;
+   length++;
+}
 template<class ItemType>
 void UnsortedTypeLL<ItemType>::print()
 {
     NodeType *temp =listData;
    while(temp!=NULL)
    {
-       cout<<temp->info;
+       temp->info.print();
        temp=temp->next;
-        cout<<" ";
+
    }
 }
 

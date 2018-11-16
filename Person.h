@@ -34,7 +34,7 @@ public:
 	string get_eye_color();
 	string get_hair_color();
 
-	void print_person();
+	void print();
 
 
 protected:

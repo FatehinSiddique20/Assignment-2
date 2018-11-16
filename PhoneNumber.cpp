@@ -36,7 +36,7 @@ void PhoneNumber::add_phone_number(string mobileNumber, string numberOperator)
 
 }
 
-void PhoneNumber::remove_phone_number(string mobileNumber, string numberOperator)
+void PhoneNumber::remove_phone_number(string mobileNumber)
 {
 
 	NumberInfo  number(mobileNumber, numberOperator);
@@ -46,15 +46,38 @@ void PhoneNumber::remove_phone_number(string mobileNumber, string numberOperator
 	}
 	else
 	{
-		UnsortList.DeleteItem(number);
+		UnsortList.DeleteItem(mobileNumber);
 	}
 }
 
-bool PhoneNumber::search_phone_number(string mobileNumber, string numberOperator)
+bool PhoneNumber::search_mobile_number(string mobileNumber, string numberOperator)
 {
 	return UnsortList.search(mobileNumber);
 }
-void PhoneNumber::print_phone_number()
+
+
+bool PhoneNumber::change_operator(string mobileNumber, string numberOperator)
+{
+NumberInfo *temp;
+	int length = numberList.LengthIs();
+	numberList.ResetList();
+	while (length--)
+	{
+			temp = numberList.GetNextItem();
+			if (temp->get_mobile_number().compare(mobileNumber) == 0)
+			{
+				temp->set_number_operator(newOperator);
+				return true;
+			}
+	}
+	return false;
+}
+int PhoneNumber::get_length()
+{
+	return numberList.LengthIs();
+}
+
+void PhoneNumber::print()
 {
 UnsortList.print();
 }
